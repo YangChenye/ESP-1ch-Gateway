@@ -1,7 +1,7 @@
 // 1-channel LoRa Gateway for ESP32 and ESP8266
 // Copyright (c) Maarten Westenberg 2016-2021 
 
-#define VERSION "V.6.2.8.EU868; PlatformIO 210712 a; GIT"
+#define VERSION "V.6.2.8.US915; PlatformIO 210712 a; GIT"
 
 //
 // Based on work done by Thomas Telkamp for Raspberry PI 1ch gateway and many others.
@@ -87,7 +87,7 @@
 // AS923		(Not Used)
 // You can find the definitions in "loraModem.h" and frequencies in
 // See https://www.thethingsnetwork.org/docs/lorawan/frequency-plans.html
-#define EU863_870 1
+#define US902_928 1
  
 
 // Define the CLASS mode of the gateway
@@ -167,7 +167,7 @@
 //	4: ESP32, Heltec and TTGO pin out (should work for Heltec, 433 and Oled too).
 //	5: Other, define your own in loraModem.h (does not include GPS Code)
 #if !defined _PIN_OUT
-#	define _PIN_OUT 1
+#	define _PIN_OUT 5 // For ESP32/Heltec Wifi LoRA 32(V2) HTIT-WB32LA board with 0.9" OLED
 #endif
 
 
@@ -264,8 +264,8 @@
 
 // ntp
 // Please add daylight saving time to NTP_TIMEZONES when desired
-#define NTP_TIMESERVER "nl.pool.ntp.org"	// Country and region specific
-#define NTP_TIMEZONES	2					// How far is our Timezone from UTC (excl daylight saving/summer time)
+#define NTP_TIMESERVER "us.pool.ntp.org"	// Country and region specific
+#define NTP_TIMEZONES	-4					// How far is our Timezone from UTC (excl daylight saving/summer time)
 #define SECS_IN_HOUR	3600
 #define _NTP_INTR 0							// Do NTP processing with interrupts or in loop();
 
@@ -376,6 +376,6 @@
 //#	define _TTNSERVER "router.eu.thethings.network"
 //
 // TTN Version 3:
-#	define _TTNSERVER "eu1.cloud.thethings.network"	
+#	define _TTNSERVER "nam1.cloud.thethings.network"	
 #	define _TTNPORT 1700							// Standard port for TTN
 #endif

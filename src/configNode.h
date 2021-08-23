@@ -171,10 +171,11 @@ struct wpas {
 wpas wpa[] = {
 //	{ "mala_w", "DeWestenbergjesZijn1Bosbes!" },
 //	{ "mala_z", "DeWestenbergjesZijn1Bosbes!" },
-	{ "mala", "DeWestenbergjesZijn1Bosbes!" },
-	{ "mala_a", "DeWestenbergjesZijn1Bosbes!" },
+	// { "mala", "DeWestenbergjesZijn1Bosbes!" },
+	// { "mala_a", "DeWestenbergjesZijn1Bosbes!" },
 //	{ "Livebox-8AFC", "QMWvLKjMgcYMDrRGQZ" },
-	{ "platenspeler", "maanlama@16" }
+	// { "platenspeler", "maanlama@16" }
+	{ "ICSL", "Icslicsl" }
 };
 
 
@@ -197,11 +198,11 @@ wpas wpa[] = {
 
 // Gateway Ident definitions. Where is the gateway located?
 #define _DESCRIPTION "ESP Gateway"			// Name of the gateway
-#define _EMAIL "mw12554@hotmail.com"		// Owner
-#define _PLATFORM "ESP8266"
-#define _LAT 52.237367
-#define _LON 5.978654
-#define _ALT 14								// Altitude
+#define _EMAIL "cy2540@columbia.edu"		// Owner
+#define _PLATFORM "Heltec WiFi LoRa 32 v2"
+#define _LAT 40.8099856
+#define _LON -73.962459
+#define _ALT 20								// Altitude
 
 
 // For asserting and testing the following defines are used.
